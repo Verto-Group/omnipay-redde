@@ -1,0 +1,29 @@
+{
+    "name": "omnipay/redde",
+    "type": "library",
+    "description": "Redde Payments driver for the Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "redde"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "Omnipay\\Reede\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~3.0",
+        "squizlabs/php_codesniffer": "^3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
