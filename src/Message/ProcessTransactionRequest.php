@@ -2,7 +2,7 @@
 
 namespace Omnipay\Redde\Message;
 
-class ViewSettlementRequest extends AbstractRequest
+class ProcessTransactionRequest extends AbstractRequest
 {
     public function getData()
     {

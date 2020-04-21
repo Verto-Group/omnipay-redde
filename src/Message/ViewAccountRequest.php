@@ -2,11 +2,11 @@
 
 namespace Omnipay\Redde\Message;
 
-class ViewTransactionRequest extends AbstractRequest
+class ViewAccountRequest extends AbstractRequest
 {
     public function send()
     {
-        $httpResponse = $this->sendRequest('/transactions', 'GET');
+        $httpResponse = $this->sendRequest('/account', 'POST');
 
         return $this->response = new Response($this, $httpResponse->getBody()->getContents());
     }

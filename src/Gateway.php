@@ -29,9 +29,19 @@ class Gateway extends AbstractGateway
         return $this->setParameter('secretKey', $value);
     }
 
-    public function purchase(array $parameters = array())
+    public function precessTansaction(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\PurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\Redde\Message\ProcessTransactionRequest', $parameters);
+    }
+
+    public function viewTansaction(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Redde\Message\ViewTransactionRequest', $parameters);
+    }
+
+    public function viewSettlement(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Redde\Message\ViewSettlementRequest', $parameters);
     }
 
     public function authorize(array $parameters = array())
@@ -49,9 +59,14 @@ class Gateway extends AbstractGateway
         return $this->createRequest('\Omnipay\Redde\Message\RefundRequest', $parameters);
     }
 
-    public function createAccount(array $parameters = array())
+    public function viewAccount(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\CreateAccountRequest', $parameters);
+        return $this->createRequest('\Omnipay\Redde\Message\ViewAccountRequest', $parameters);
+    }
+
+    public function updateAccount(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Redde\Message\UpdateAccountRequest', $parameters);
     }
 
     public function createCard(array $parameters = array())

@@ -2,7 +2,7 @@
 
 namespace Omnipay\Redde\Message;
 
-class AuthorizeRequest extends PurchaseRequest
+class AuthorizeRequest extends ProcessTransactionRequest
 {
     public function getData()
     {
