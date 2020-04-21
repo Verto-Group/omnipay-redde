@@ -8,7 +8,7 @@ class CaptureRequest extends AbstractRequest
 {
     public function getData()
     {
-        $this->validate('transactionReference');
+        $this->validate('transaction_uuid');
         $amount = $this->getAmountInteger();
 
         return $amount ? array('amount' => $amount) : array();
@@ -17,9 +17,9 @@ class CaptureRequest extends AbstractRequest
     public function sendData($data)
     {
         $httpResponse = $this->sendRequest(
-            '/charges/' . $this->getTransactionReference() . '/capture',
+            '/transactions/' . $this->getTransactionUuid() . '/capture',
             $data,
-            'PUT'
+            'PATCH'
         );
         
         return $this->response = new CaptureResponse($this, $httpResponse->getBody()->getContents());
