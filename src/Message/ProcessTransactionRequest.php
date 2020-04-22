@@ -1,6 +1,6 @@
 <?php
 
-namespace Redde\Message;
+namespace Redde\OmnipayRedde\Message;
 
 class ProcessTransactionRequest extends AbstractRequest
 {

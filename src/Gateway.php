@@ -1,6 +1,6 @@
 <?php
 
-namespace Redde;
+namespace Redde\OmnipayRedde;
 
 use Omnipay\Common\AbstractGateway;
 

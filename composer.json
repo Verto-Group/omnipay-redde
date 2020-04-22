@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Omnipay\\redde\\": "src"
+            "Redde\\OmnipayRedde\\": "src"
         }
     },
     "scripts": {
