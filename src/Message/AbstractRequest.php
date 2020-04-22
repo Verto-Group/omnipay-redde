@@ -6,7 +6,7 @@ use Guzzle\Http\Message\RequestInterface;
 
 abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
-    protected $testEndpoint = 'redde.test/api/omnipay-redde';  //input api here
+    protected $testEndpoint = 'redde.test/api/';  //input api here
     protected $liveEndpoint = '';  //input api here
 
     public function getSecretKey()

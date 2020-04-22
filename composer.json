@@ -1,5 +1,5 @@
 {
-    "name": "omnipay/redde",
+    "name": "redde/omnipay-redde",
     "type": "library",
     "description": "Redde Payments driver for the Omnipay payment processing library",
     "keywords": [
