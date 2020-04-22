@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Redde\Message;
+namespace Redde\Message;
 
 use Guzzle\Http\Message\RequestInterface;
 

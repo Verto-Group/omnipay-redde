@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Redde\Message;
+namespace Redde\Message;
 
 class ViewAccountRequest extends AbstractRequest
 {
