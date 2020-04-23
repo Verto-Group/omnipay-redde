@@ -29,48 +29,48 @@ class Gateway extends AbstractGateway
         return $this->setParameter('secretKey', $value);
     }
 
-    public function precessTansaction(array $parameters = array())
+    public function processTransaction(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\ProcessTransactionRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\ProcessTransactionRequest', $parameters);
     }
 
-    public function viewTansaction(array $parameters = array())
+    public function viewTransaction(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\ViewTransactionRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\ViewTransactionRequest', $parameters);
     }
 
     public function viewSettlement(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\ViewSettlementRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\ViewSettlementRequest', $parameters);
     }
 
     public function authorize(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\AuthorizeRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\AuthorizeRequest', $parameters);
     }
 
     public function capture(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\CaptureRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\CaptureRequest', $parameters);
     }
 
     public function refund(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\RefundRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\RefundRequest', $parameters);
     }
 
     public function viewAccount(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\ViewAccountRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\ViewAccountRequest', $parameters);
     }
 
     public function updateAccount(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\UpdateAccountRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\UpdateAccountRequest', $parameters);
     }
 
     public function createCard(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Redde\Message\CreateCardRequest', $parameters);
+        return $this->createRequest('Redde\OmnipayRedde\Message\CreateCardRequest', $parameters);
     }
 }

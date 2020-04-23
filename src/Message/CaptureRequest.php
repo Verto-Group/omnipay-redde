@@ -9,7 +9,8 @@ class CaptureRequest extends AbstractRequest
     public function getData()
     {
         $this->validate('transaction_uuid');
-        $amount = $this->getAmountInteger();
+
+        $amount = $this->getAmount();
 
         return $amount ? array('amount' => $amount) : array();
     }
@@ -21,7 +22,6 @@ class CaptureRequest extends AbstractRequest
             $data,
             'PATCH'
         );
-        
-        return $this->response = new CaptureResponse($this, $httpResponse->getBody()->getContents());
+        return $this->response = new Response($this, $httpResponse->getBody()->getContents());
     }
 }

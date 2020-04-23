@@ -4,9 +4,14 @@ namespace Redde\OmnipayRedde\Message;
 
 class ViewAccountRequest extends AbstractRequest
 {
-    public function send()
+    public function getData()
     {
-        $httpResponse = $this->sendRequest('/account', 'POST');
+        //
+    }
+
+    public function sendData($data = null)
+    {
+        $httpResponse = $this->sendRequest('/account', null, 'POST');
 
         return $this->response = new Response($this, $httpResponse->getBody()->getContents());
     }

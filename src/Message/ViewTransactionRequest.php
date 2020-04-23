@@ -4,9 +4,14 @@ namespace Redde\OmnipayRedde\Message;
 
 class ViewTransactionRequest extends AbstractRequest
 {
-    public function send()
+    public function getData()
     {
-        $httpResponse = $this->sendRequest('/transactions', 'GET');
+        //
+    }
+
+    public function sendData($data = null)
+    {
+        $httpResponse = $this->sendRequest('/transactions', null, 'GET');
 
         return $this->response = new Response($this, $httpResponse->getBody()->getContents());
     }

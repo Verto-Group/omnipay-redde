@@ -6,7 +6,7 @@ use Guzzle\Http\Message\RequestInterface;
 
 abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
-    protected $testEndpoint = 'redde.test/api/';  //input api here
+    protected $testEndpoint = 'redde.test/api/fdafca1b-4cc1-4da1-9d13-add14c806de1';  //input api here
     protected $liveEndpoint = '';  //input api here
 
     public function getSecretKey()
@@ -39,16 +39,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('transaction_uuid', $value);
     }
 
-    public function getCardUuid()
-    {
-        return $this->getParameter('card_uuid');
-    }
-
-    public function setCardUuid($value)
-    {
-        return $this->setParameter('card_uuid', $value);
-    }
-
     protected function getEndpoint()
     {
         return $this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint;
@@ -60,9 +50,8 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
         return $this->httpClient->request(
             $method,
-            $this->getEndpoint() . $action,
-            array('Authorization' => 'Basic ' . base64_encode($this->getSecretKey() . ':')),
-            $body
+            $this->getEndpoint() . $action . '?' . $body,
+            array('Authorization' => 'Bearer ' . $this->getSecretKey(), 'Accept' => 'application/json'),
         );
     }
 

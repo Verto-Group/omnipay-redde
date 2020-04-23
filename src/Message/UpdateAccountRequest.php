@@ -7,6 +7,7 @@ class UpdateAccountRequest extends AbstractRequest
     public function getData()
     {
         $data = array();
+        $this->validate('name', 'legal_name');
         $data['name'] = $this->getName();
         $data['legal_name'] = $this->getLegalName();
         $data['entity_type_id'] = $this->getEntityTypeId();
