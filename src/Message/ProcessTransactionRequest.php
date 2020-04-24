@@ -14,7 +14,7 @@ class ProcessTransactionRequest extends AbstractRequest
         $data['amount'] = $this->getAmount();
         $data['ip_address'] = $this->getClientIp();
         $data['capture'] = $this->getCapture();
-        $data['card'] = $this->getCard();
+        $data['card_token'] = $this->getCardToken();
 
         return $data;
     }
@@ -48,13 +48,13 @@ class ProcessTransactionRequest extends AbstractRequest
         return $this->setParameter('amount', $value);
     }
 
-    public function getCard()
+    public function getCardToken()
     {
-        return $this->getParameter('card');
+        return $this->getParameter('card_token');
     }
 
-    public function setCard($value)
+    public function setCardToken($value)
     {
-        return $this->setParameter('card', $value);
+        return $this->setParameter('card_token', $value);
     }
 }

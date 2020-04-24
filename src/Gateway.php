@@ -44,11 +44,6 @@ class Gateway extends AbstractGateway
         return $this->createRequest('Redde\OmnipayRedde\Message\ViewSettlementRequest', $parameters);
     }
 
-    public function authorize(array $parameters = array())
-    {
-        return $this->createRequest('Redde\OmnipayRedde\Message\AuthorizeRequest', $parameters);
-    }
-
     public function capture(array $parameters = array())
     {
         return $this->createRequest('Redde\OmnipayRedde\Message\CaptureRequest', $parameters);

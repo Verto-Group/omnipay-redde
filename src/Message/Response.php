@@ -20,4 +20,9 @@ class Response extends AbstractResponse
     {
         return $this->data;
     }
+
+    public function isSuccessful()
+    {
+        //
+    }
 }
