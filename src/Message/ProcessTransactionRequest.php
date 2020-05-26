@@ -7,7 +7,7 @@ class ProcessTransactionRequest extends AbstractRequest
     public function getData()
     {
         $data = array();
-        $this->validate('amount', 'token', 'clientIp', 'card');
+        $this->validate('amount', 'token', 'clientIp', 'card_token');
         $data['token'] = $this->getToken();
         $data['email'] = $this->getEmail();
         $data['description'] = $this->getDescription();
